@@ -46,7 +46,7 @@ begin
             registers(to_integer(unsigned(write_register_address))) <= write_data;
         end if;
     end process;
-    register_data1 <= x"0000" when read_register_address1 = "000" else reg_array(to_integer(unsigned(reg1_address)));
-    register_data2 <= x"0000" when read_register_address2 = "000" else reg_array(to_integer(unsigned(reg2_address)));
+    register_data1 <= x"0000" when read_register_address1 = "000" else reg_array(to_integer(unsigned(read_register_address1)));
+    register_data2 <= x"0000" when read_register_address2 = "000" else reg_array(to_integer(unsigned(read_register_address2)));
 end Behavioral;
 
